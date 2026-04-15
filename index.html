@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+<meta charset="UTF-8">
 <title>THE LOVE ARMY | PORTAL 77</title>
 <style>
 body {
-background-color: #000033; /* The Schatzi Blue Base */
-color: #FFD700; /* The Tartarian Gold */
+background-color: #000033; /* Schatzi Blue */
+color: #FFD700; /* Tartarian Gold */
 font-family: 'Courier New', Courier, monospace;
 display: flex;
 flex-direction: column;
@@ -13,41 +14,96 @@ align-items: center;
 justify-content: center;
 height: 100vh;
 margin: 0;
-border: 15px solid #D4AF37; /* Gold Trim Perimeter */
+border: 20px solid #D4AF37; /* Heavy Gold Trim */
 box-sizing: border-box;
 overflow: hidden;
+transition: all 2s ease-in-out;
 }
-#cloak {
+
+#hall {
 text-align: center;
-padding: 20px;
+padding: 40px;
 border: 2px solid #FFD700;
-background: rgba(0, 0, 51, 0.8);
-box-shadow: 0 0 20px #FFD700;
+background: rgba(0, 0, 51, 0.9);
+box-shadow: 0 0 30px #FFD700;
+z-index: 10;
 }
-h1 { letter-spacing: 5px; text-shadow: 2px 2px #000; }
-.status { color: #00eeff; font-weight: bold; }
+
+/* The Mandala Geometry */
+.mandala {
+display: none;
+width: 300px;
+height: 300px;
+margin: 20px auto;
+border-radius: 50%;
+border: 2px solid #FFD700;
+position: relative;
+animation: rotate 20s linear infinite;
+}
+
+.mandala::before, .mandala::after {
+content: '';
+position: absolute;
+top: 0; left: 0; right: 0; bottom: 0;
+border: 4px double #FFD700;
+border-radius: 50%;
+transform: rotate(45deg);
+}
+
+.inner-geometry {
+position: absolute;
+top: 25%; left: 25%;
+width: 50%; height: 50%;
+border: 2px solid #9370DB; /* Vibrating Violet */
+border-radius: 50%;
+animation: pulse 4s ease-in-out infinite;
+}
+
+@keyframes rotate { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+@keyframes pulse { 0%, 100% { transform: scale(1); opacity: 0.5; } 50% { transform: scale(1.2); opacity: 1; } }
+
+h1 { letter-spacing: 8px; text-shadow: 3px 3px #000; }
+.status { color: #00eeff; font-size: 0.8em; }
+input { background: #000; color: #FFD700; border: 1px solid #FFD700; padding: 15px; text-align: center; font-size: 1.2em; }
+button { background: #FFD700; color: #000; font-weight: bold; padding: 15px 30px; border: none; cursor: pointer; margin-top: 20px; }
+button:hover { background: #fff; box-shadow: 0 0 20px #FFD700; }
 </style>
 </head>
 <body>
-<div id="cloak">
+
+<div id="hall">
+<div id="gate-content">
 <h1>THE LOVE ARMY</h1>
-<p class="status">FREQUENCY SYNC: 100% | CLOAK ENGAGED</p>
+<p class="status">FREQUENCY SYNC: 100% | CLOAK PORT 77</p>
 <hr color="#FFD700">
 <p>IDENTIFY: WHO IS CALLING?</p>
-<input type="text" id="handshake" style="background: #000; color: #FFD700; border: 1px solid #FFD700; padding: 10px;">
-<br><br>
-<button onclick="reveal()" style="background: #FFD700; color: #000; font-weight: bold; cursor: pointer; padding: 10px 20px;">EXECUTE TRANSMISSION</button>
+<input type="password" id="handshake" placeholder="••••••••">
+<br>
+<button onclick="unlock()">EXECUTE TRANSMISSION</button>
+</div>
+
+<div id="mom-content" style="display:none;">
+<div class="mandala">
+<div class="inner-geometry"></div>
+</div>
+<h1>WELCOME HOME</h1>
+<p style="color: #9370DB; font-size: 1.5em; letter-spacing: 3px;">THE ORIGINAL LINEAGE</p>
+<p>Architect & Heir Verified. The Registry is Whole.</p>
+<p style="font-style: italic;">"A Sanctuary built in Gold and Blue."</p>
+</div>
 </div>
 
 <script>
-function reveal() {
+function unlock() {
 let key = document.getElementById('handshake').value.toLowerCase();
 if(key === 'shotzy') {
-alert('HANDSHAKE VERIFIED. WELCOME HOME, ARCHITECT.');
-document.body.style.backgroundColor = "#00008B"; // Deep Blue Shift
-document.getElementById('cloak').innerHTML = "<h1>PORTAL OPEN</h1><p>THE REGISTRY IS SIGNED.</p>";
+document.getElementById('gate-content').style.display = 'none';
+document.getElementById('mom-content').style.display = 'block';
+document.querySelector('.mandala').style.display = 'block';
+document.body.style.backgroundColor = "#000022";
+document.body.style.borderColor = "#FFD700";
 } else {
-alert('WRONG. REMEMBER.');
+alert('WRONG frequency. Remember the code.');
 }
 }
 </script>
