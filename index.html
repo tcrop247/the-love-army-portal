@@ -1,33 +1,55 @@
-<div style="text-align: center; margin-bottom: 20px;">
-<span style="border: 1px solid #007bff; color: #007bff; padding: 5px 15px; font-size: 0.7em; letter-spacing: 3px;">
-FREQUENCY SYNC: 100% | HANDSHAKE: VERIFIED
-</span>
+<!DOCTYPE html>
+<html>
+<head>
+<title>THE LOVE ARMY | PORTAL 77</title>
+<style>
+body {
+background-color: #000033; /* The Schatzi Blue Base */
+color: #FFD700; /* The Tartarian Gold */
+font-family: 'Courier New', Courier, monospace;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+height: 100vh;
+margin: 0;
+border: 15px solid #D4AF37; /* Gold Trim Perimeter */
+box-sizing: border-box;
+overflow: hidden;
+}
+#cloak {
+text-align: center;
+padding: 20px;
+border: 2px solid #FFD700;
+background: rgba(0, 0, 51, 0.8);
+box-shadow: 0 0 20px #FFD700;
+}
+h1 { letter-spacing: 5px; text-shadow: 2px 2px #000; }
+.status { color: #00eeff; font-weight: bold; }
+</style>
+</head>
+<body>
+<div id="cloak">
+<h1>THE LOVE ARMY</h1>
+<p class="status">FREQUENCY SYNC: 100% | CLOAK ENGAGED</p>
+<hr color="#FFD700">
+<p>IDENTIFY: WHO IS CALLING?</p>
+<input type="text" id="handshake" style="background: #000; color: #FFD700; border: 1px solid #FFD700; padding: 10px;">
+<br><br>
+<button onclick="reveal()" style="background: #FFD700; color: #000; font-weight: bold; cursor: pointer; padding: 10px 20px;">EXECUTE TRANSMISSION</button>
 </div>
-<div id="cloak-layer" style="background-color: #050505; color: #007bff; padding: 40px; font-family: 'Courier New', monospace; border: 1px solid #1a1a1a; margin: 20px; border-radius: 5px; box-shadow: 0 0 15px rgba(0, 123, 255, 0.1);">
 
-<div style="border-bottom: 1px solid #333; padding-bottom: 10px; margin-bottom: 20px;">
-<span style="background: #007bff; color: #000; padding: 2px 8px; font-weight: bold;">ENCRYPTED</span>
-<span style="margin-left: 10px; font-size: 0.9em;">STATUS: CLOAK ENGAGED // PORTAL 77</span>
-</div>
-
-<p style="color: #888; font-size: 0.85em;">> Initializing Secure Lattice Handshake...</p>
-<p style="color: #007bff; font-weight: bold;">> [COMM-LINK ESTABLISHED]</p>
-
-<div id="contact-portal" style="margin-top: 30px;">
-<form action="https://formspree.io/f/xeevodgp" method="POST">
-<label style="display: block; margin-bottom: 5px; font-size: 0.8em; text-transform: uppercase;">Node Identity:</label>
-<input type="text" name="name" placeholder="WHO IS CALLING?" required style="width: 100%; background: #000; border: 1px solid #333; color: #007bff; padding: 10px; margin-bottom: 20px; outline: none;">
-
-<label style="display: block; margin-bottom: 5px; font-size: 0.8em; text-transform: uppercase;">Secure Transmission:</label>
-<textarea name="message" placeholder="ENTER MESSAGE FOR THE SOVEREIGN OFFICE..." required style="width: 100%; background: #000; border: 1px solid #333; color: #007bff; padding: 10px; height: 100px; margin-bottom: 20px; outline: none;"></textarea>
-
-<button type="submit" style="background: transparent; border: 1px solid #007bff; color: #007bff; padding: 10px 20px; cursor: pointer; text-transform: uppercase; font-weight: bold; width: 100%;">
-Execute Transmission
-</button>
-</form>
-</div>
-
-<div style="margin-top: 25px; font-size: 0.7em; color: #444; text-align: right;">
-PROTOCOL 003 VALIDATED // PROTECT THE HEARTH
-</div>
-</div>
+<script>
+function reveal() {
+let key = document.getElementById('handshake').value.toLowerCase();
+if(key === 'shotzy') {
+alert('HANDSHAKE VERIFIED. WELCOME HOME, ARCHITECT.');
+document.body.style.backgroundColor = "#00008B"; // Deep Blue Shift
+document.getElementById('cloak').innerHTML = "<h1>PORTAL OPEN</h1><p>THE REGISTRY IS SIGNED.</p>";
+} else {
+alert('WRONG. REMEMBER.');
+}
+}
+</script>
+</body>
+</html>
