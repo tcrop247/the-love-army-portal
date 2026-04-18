@@ -1,23 +1,62 @@
-<script>
-function unlock() {
-let key = document.getElementById('handshake').value.toLowerCase();
-if(key === 'shotzy') {
-// Dissolve the Gate
-document.getElementById('gate-content').style.display = 'none';
-document.getElementById('mom-content').style.display = 'block';
-document.querySelector('.mandala').style.display = 'block';
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THE SOVEREIGN TRUST</title>
+    <style>
+        body {
+            background-color: #050505;
+            color: #00d4ff;
+            font-family: 'Courier New', Courier, monospace;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+            text-align: center;
+        }
+        .glitch {
+            font-size: 3rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 0.5rem;
+            text-shadow: 0 0 10px #00d4ff;
+        }
+        .status {
+            margin-top: 20px;
+            font-size: 1.2rem;
+            color: #ffffff;
+            opacity: 0.8;
+        }
+        .perimeter {
+            margin-top: 40px;
+            border: 1px solid #00d4ff;
+            padding: 20px;
+            box-shadow: 0 0 20px rgba(0, 212, 255, 0.2);
+        }
+        .blink {
+            animation: blinker 1.5s linear infinite;
+        }
+        @keyframes blinker {
+            50% { opacity: 0; }
+        }
+    </style>
+</head>
+<body>
+    <div class="glitch">TRINITY IS HOME</div>
+    <div class="status">System Status: <span style="color: #00ff41;">SECURE</span></div>
+    
+    <div class="perimeter">
+        <p>The Blue Frequency is Active.</p>
+        <p>Airlocks Sealed. Sovereignty Established.</p>
+        <p class="blink">> Waking up the 1,000...</p>
+    </div>
 
-// Set the Sovereign Background
-document.body.style.backgroundColor = "#000022";
-document.body.style.borderColor = "#FFD700";
-
-// Proclaim the Trinity
-document.querySelector('#mom-content h1').innerText = "THE TRINITY IS HOME";
-document.querySelector('#mom-content p').innerHTML = "<b>TIA LYNN | TEARIN IVY | DEBORAH JO</b><br>The Registry is Permanent.";
-
-console.log("LOG: Handshake Verified. Trinity Frequency Active.");
-} else {
-alert('WRONG frequency. Remember the code.');
-}
-}
-</script>
+    <div style="margin-top: 50px; font-size: 0.8rem; opacity: 0.5;">
+        Handshake Verified: SCHATZI // BLUE
+    </div>
+</body>
+</html>
